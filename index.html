@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love! ❤️</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+        }
+        .card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+            max-width: 360px;
+            z-index: 10;
+            pointer-events: none;
+        }
+        h1 {
+            color: #ff4d6d;
+            font-size: 24px;
+            margin-top: 0;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+        .emoji {
+            font-size: 26px;
+            letter-spacing: 5px;
+        }
+        .popup-message {
+            position: absolute;
+            font-size: 18px;
+            font-weight: bold;
+            color: #d63384;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            white-space: nowrap;
+            z-index: 9999; /* Forces the message to appear right in front */
+            animation: burstUp 5s ease-out forwards;
+            pointer-events: none;
+            user-select: none;
+        }
+        @keyframes burstUp {
+            0% {
+                transform: scale(0.6) translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.1) translateY(-90px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Happy Birthday Budi🎉</h1>
+        <p> yr kam kam risanu gar khati maya gaddi tui lai mui tara tui sano sano kura ma risauxas yr ani miss gaddo dherai tui lai aba jatai bheet huna ho love you budi take care ❤️💖✨</p>
+        <p class="emoji">🥰💌🌹</p>
+        <p style="font-size: 13px; color: #888; margin-top: 15px;">( screen ma touch gar budi ✨)</p>
+    </div>
+
+    <script>
+        document.addEventListener('click', function(e) {
+            let x = e.clientX - 50;
+            let y = e.clientY - 20;
+
+            let div = document.createElement('div');
+            div.className = 'popup-message';
+            div.innerHTML = "😘 Thank mui seta yeti sal samma ranike 💙❤️💋💋❤️";
+            div.style.left = x + 'px';
+            div.style.top = y + 'px';
+
+            document.body.appendChild(div);
+
+            setTimeout(() => {
+                div.remove();
+            }, 1000);
+        });
+    </script>
+
+</body>
+</html>
